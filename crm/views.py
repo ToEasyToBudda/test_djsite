@@ -1,15 +1,13 @@
 from django.shortcuts import render
 from .models import Order
 from .forms import OrderForm
+from cms.models import CmsSlider
 
 def crm_page(request):
-    object_list = Order.objects.all()
-    form = OrderForm()
-    dct = {
-        'object_list': object_list,
-        'form': form
-    }
-    return render(request, './index.html', dct)
+    slider_list = CmsSlider.objects.all()
+    return render(request, './index.html', {
+        'slider_list': slider_list
+    })
 
 def thanks_page(request):
     name = request.POST['name']
