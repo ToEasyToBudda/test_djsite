@@ -6,7 +6,11 @@
 	<!-- Спасибо -->
   	<section>
   		<div class="container">
+  			{% if name %}
   			<CENTER style = 'margin-top: 35%; margin-bottom: 35%;'><h1>{{ name }}, Спасибо за заявку!</h1></CENTER>
+  			{% else %}
+  			<CENTER style = 'margin-top: 35%; margin-bottom: 35%;'><h1>Спасибо страница!</h1></CENTER>
+  			{% endif %}
   		</div>
   	</section>
   	<!-- Спасибо -->
