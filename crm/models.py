@@ -29,7 +29,7 @@ class Order(models.Model):
 class CommentCrm(models.Model):
     cmmnt_binding = models.ForeignKey(Order, on_delete=models.CASCADE, verbose_name='Заявка')
     cmmnt_text  = models.TextField(verbose_name='Текст комментария')
-    cmmnt_dt = models.DateTimeField(auto_now=True)
+    cmmnt_dt = models.DateTimeField(auto_now=True, verbose_name='Дата создания')
 
     def __str__(self):
         return self.cmmnt_text
